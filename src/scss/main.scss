@@ -1,0 +1,14 @@
+/*FontAwesome*/
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome.scss";
+
+@import "variables";
+@import "mixins";
+
+/*Bootstrap*/
+@import "bootstrap_custom";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import "fonts";
+@import "typography";
+@import "custom";

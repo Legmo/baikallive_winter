@@ -1,0 +1,61 @@
+//Links
+a {
+    color: $c_bluedark;
+    text-decoration: underline;
+    transition: color 0.4s ease-out;
+    font-family: $f_default;
+    outline: none !important;
+    &:hover {
+        color: $c_orange;
+        text-decoration: none;
+        transition: color 0.4s ease-out;
+    }
+    &:visited {
+        color: $c_bluexdark; //todo - change color?
+    }
+}
+
+//Text styles
+.text-bold { /*Текст - жирный.*/
+    font-weight: bold;
+}
+.text-italic { /*Текст - курсив.*/
+    font-style: italic;
+}
+.text-underline { /*Текст - подчеркнутый.*/
+    text-decoration: underline;
+}
+.text-caps { /*Текст - CapsLock.*/
+    text-transform: uppercase;
+}
+
+//Headers
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $c_orange;
+    font-family: $f_Rough;
+    line-height: 1.2;
+}
+h1 {
+    font-size: 28px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 18px;
+}
+
+li,
+p { /*Абзац. Стиль текста.*/
+    font-family: $f_default;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.2; /*Интерлиньяж.*/
+}

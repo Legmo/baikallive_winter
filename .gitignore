@@ -1,0 +1,12 @@
+#
+#  File:      .gitignore
+#  Project:   baikallive-winter
+#  Date:      2018-01-08
+#  Developer: Vladimir Degtiarev
+#
+
+# Ignore configuration files from JetBrains IDE
+.idea
+
+# Ignore modules npm
+node_modules

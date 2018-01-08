@@ -1,0 +1,53 @@
+//Font-Awesome
+@mixin fa-icon() {
+    display: inline-block;
+    font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base} FontAwesome; // shortening font declaration
+    font-size: inherit; // can't have font-size inherit on line above, so need to override
+    text-rendering: auto; // optimizelegibility throws things off #1094
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+// Adaptability marker:
+//----------------------------------------
+@mixin adaptive_marker($color, $txt) {
+    content: $txt;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: $color;
+    z-index: 999999999;
+    text-align: center;
+}
+
+body {
+/*     &::after {
+        //0 - 480
+        @media screen and (max-width: $screen-xs) {
+            @include adaptive_marker(red, "0");
+        } //todo
+
+        //480 - 768
+        @media screen and (min-width: $screen-xs) and (max-width: $screen-sm) {
+            @include adaptive_marker(blue, "xs");
+        } //todo
+
+        //768 - 992
+        @media screen and (min-width: $screen-sm) and (max-width: $screen-md) {
+            @include adaptive_marker(yellow, "sm");
+        } //todo
+
+        //992 - 1200
+        @media screen and (min-width: $screen-md) and (max-width: $screen-lg) {
+            @include adaptive_marker(greenyellow, "md");
+        } //todo
+
+        //1200 - infinity
+        @media screen and (min-width: $screen-lg) {
+            @include adaptive_marker(violet, "lg");
+        } //todo
+    } */
+}

@@ -1,0 +1,33 @@
+//Fonts
+@font-face {
+    font-family: 'Posterizer_KG';
+    src: url(../fonts/Posterizer_KG.otf);
+}
+@font-face {
+    font-family: 'Posterizer_KG_Inline';
+    src: url(../fonts/Posterizer_KG_Inline.otf);
+}
+@font-face {
+    font-family: 'Posterizer_KG_Rough';
+    src: url(../fonts/Posterizer_KG_Rough.otf);
+}
+@font-face {
+    font-family: 'Posterizer_KG_Rounded';
+    src: url(../fonts/Posterizer_KG_Rounded.otf);
+}
+@font-face {
+    font-family: 'Posterizer_KG_Sketch';
+    src: url(../fonts/Posterizer_KG_Sketch.otf);
+}
+
+//Example for multy-type font
+@font-face {
+ /*
+    font-family: 'BrandonGrotesqueWeb-Light';
+    src: url('../fonts/BrandonGrotesqueWeb-Light.eot');
+    src: url('../fonts/BrandonGrotesqueWeb-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BrandonGrotesqueWeb-Light.woff2') format('woff2'),
+    url('../fonts/BrandonGrotesqueWeb-Light.woff') format('woff'),
+    url('../fonts/BrandonGrotesqueWeb-Light.ttf') format('truetype');
+    */
+}
