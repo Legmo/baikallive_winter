@@ -29,7 +29,7 @@ body {
     //width: auto;
     margin: 0 auto;
     overflow: hidden;
-    //width: 1160px;
+    max-width: 1160px;
     margin-top: 10px;
     padding: 0 20px;
     position: relative;
@@ -458,12 +458,3 @@ body {
     }
 }
 
-.red {
-    height: 20px;
-    @include media-breakpoint-between(xs, sm) {
-        background: greenyellow;
-    }
-    @include media-breakpoint-between(sm, xl) {
-        background: red;
-    }
-}
