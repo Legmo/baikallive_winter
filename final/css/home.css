@@ -8,8 +8,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url(../fonts/fontawesome-webfont.eot);
-  src: url(../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(../af7ae505a9eed503f8b8e6982036873e.woff2) format("woff2"), url(../fee66e712a8a08eef5805a46892932ad.woff) format("woff"), url(../fonts/fontawesome-webfont.ttf) format("truetype"), url(../img/fontawesome-webfont.svg#fontawesomeregular) format("svg");
+  src: url(../fonts/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713);
+  src: url(../fonts/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713?#iefix&v=4.7.0) format("embedded-opentype"), url(../af7ae505a9eed503f8b8e6982036873e.woff2) format("woff2"), url(../fee66e712a8a08eef5805a46892932ad.woff) format("woff"), url(../fonts/fontawesome-webfont.ttf?b06871f281fee6b241d60582ae9369b9) format("truetype"), url(../img/fontawesome-webfont.svg?5e4ba077a6b912ba665839d06fc1da67#fontawesomeregular) format("svg");
   font-weight: normal;
   font-style: normal; }
 .fa {
@@ -1504,33 +1504,6 @@
   margin: 0;
   overflow: visible;
   clip: auto; }
-body {
-  /*     &::after {
-        //0 - 480
-        @media screen and (max-width: $screen-xs) {
-            @include adaptive_marker(red, "0");
-        } //todo
-
-        //480 - 768
-        @media screen and (min-width: $screen-xs) and (max-width: $screen-sm) {
-            @include adaptive_marker(blue, "xs");
-        } //todo
-
-        //768 - 992
-        @media screen and (min-width: $screen-sm) and (max-width: $screen-md) {
-            @include adaptive_marker(yellow, "sm");
-        } //todo
-
-        //992 - 1200
-        @media screen and (min-width: $screen-md) and (max-width: $screen-lg) {
-            @include adaptive_marker(greenyellow, "md");
-        } //todo
-
-        //1200 - infinity
-        @media screen and (min-width: $screen-lg) {
-            @include adaptive_marker(violet, "lg");
-        } //todo
-    } */ }
 /*Bootstrap*/
 /*!
  * Bootstrap v4.0.0-beta.3 (https://getbootstrap.com)
@@ -7121,21 +7094,80 @@ a.text-dark:focus, a.text-dark:hover {
       background-color: #fff !important; }
   .table-bordered th, .table-bordered td {
     border: 1px solid #ddd !important; } }
+body::after {
+  /* @include media-breakpoint-only(xs) {
+            @include adaptive_marker(red, "0");
+        }*/ }
+@media (max-width: 767.99px) {
+    body::after {
+      content: "xs";
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background: blue;
+      z-index: 999999999;
+      text-align: center; } }
+@media (min-width: 576px) and (max-width: 991.99px) {
+    body::after {
+      content: "sm";
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background: yellow;
+      z-index: 999999999;
+      text-align: center; } }
+@media (min-width: 768px) and (max-width: 1199.99px) {
+    body::after {
+      content: "md";
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background: greenyellow;
+      z-index: 999999999;
+      text-align: center; } }
+@media (min-width: 992px) {
+    body::after {
+      content: "lg";
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background: violet;
+      z-index: 999999999;
+      text-align: center; } }
+@media (min-width: 1200px) {
+    body::after {
+      content: "xl";
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background: silver;
+      z-index: 999999999;
+      text-align: center; } }
 @font-face {
   font-family: 'Posterizer_KG';
-  src: url(../fonts/Posterizer_KG.otf); }
+  src: url(../fonts/Posterizer_KG.otf?135f30512ec927134236c4693fb1a7c4); }
 @font-face {
   font-family: 'Posterizer_KG_Inline';
-  src: url(../fonts/Posterizer_KG_Inline.otf); }
+  src: url(../fonts/Posterizer_KG_Inline.otf?e348c4f3f42fc7f96ec8247d02071160); }
 @font-face {
   font-family: 'Posterizer_KG_Rough';
-  src: url(../fonts/Posterizer_KG_Rough.otf); }
+  src: url(../fonts/Posterizer_KG_Rough.otf?d0a6182924ae3af19df47ed5540b77b2); }
 @font-face {
   font-family: 'Posterizer_KG_Rounded';
-  src: url(../fonts/Posterizer_KG_Rounded.otf); }
+  src: url(../fonts/Posterizer_KG_Rounded.otf?b7ffae4abb014e99cd15f66309acd946); }
 @font-face {
   font-family: 'Posterizer_KG_Sketch';
-  src: url(../fonts/Posterizer_KG_Sketch.otf); }
+  src: url(../fonts/Posterizer_KG_Sketch.otf?8cddc50be5241fce564dac6d0f3e2e04); }
 @font-face {
   /*
     font-family: 'BrandonGrotesqueWeb-Light';
@@ -7216,19 +7248,18 @@ body {
 .main-content-wrapper {
   height: 100%;
   width: 100%;
-  background: url(../img/background-content2.jpg) repeat-x center bottom;
+  background: url(../img/background-content.jpg?b0aa38f7dcce30163ee787c5dd0fe321) repeat-x center bottom;
   color: white; }
 .main-content {
   height: 100%;
   margin: 0 auto;
   overflow: hidden;
-  width: 1160px;
   margin-top: 10px;
   padding: 0 20px;
   position: relative; }
 #head {
   /*Основной контейнер.*/
-  background: url(../img/background-header3.png) repeat-x center -10px; }
+  background: url(../img/background-header.png?4670e41893864fc9c698db4cba58fa1f) repeat-x center -10px; }
 #head .head-box {
     /*Блок с контентом шапки.*/
     height: 250px;
@@ -7254,7 +7285,7 @@ body {
       width: 576px;
       height: 180px;
       margin: 0 auto;
-      background: url(../img/logo2.png) no-repeat; }
+      background: url(../img/logo_baikal-live.png?0f2504d893337eca90df20a2c462f615) no-repeat; }
 .column-full {
   width: 100%;
   clear: both;
@@ -7289,9 +7320,13 @@ body {
       background: #c82d1f;
       padding: 14px 15px 15px;
       border-radius: 8px;
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      -webkit-transition: all 0.4s ease-out;
+      transition: all 0.4s ease-out; }
 .column-full .content-festival-information p a.button:hover {
-        background: #ea3524; }
+        background: #ea3524;
+        -webkit-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out; }
 .column-left {
   width: 70%;
   float: left; }
@@ -7331,8 +7366,6 @@ body {
       height: 233px;
       margin: 6px 20px 0 0;
       border-radius: 8px; }
-.column-left .content-artists .img.pic-3 {
-        background: url(../img/all1.jpg) no-repeat; }
 .column-left .content-artists .inf {
       float: left;
       width: 350px;
@@ -7426,42 +7459,44 @@ body {
         -webkit-transition: all 0.4s ease-out;
         transition: all 0.4s ease-out; }
 .content-partners ul li a:hover {
-        opacity: 1;
-        border-color: #0086c9;
-        -webkit-transition: all 0.4s ease-out;
-        transition: all 0.4s ease-out; }
+          opacity: 1;
+          border-color: #0086c9;
+          -webkit-transition: all 0.4s ease-out;
+          transition: all 0.4s ease-out; }
 .content-partners ul li a.free {
-        padding-top: 60px;
-        text-indent: 0;
-        text-decoration: none; }
-.content-partners ul li a.free span {
-          display: block;
-          text-decoration: underline;
-          font-weight: bold; }
-.content-partners ul li a.free:hover span {
+          padding-top: 60px;
+          text-indent: 0;
           text-decoration: none; }
+.content-partners ul li a.free span {
+            display: block;
+            text-decoration: underline;
+            font-weight: bold; }
+.content-partners ul li a.free:hover {
+            color: #c82d1f; }
+.content-partners ul li a.free:hover span {
+              text-decoration: none; }
 .content-partners ul li a.aktsent {
-        background: url(../img/logo-aktsent.png) no-repeat center 7px white; }
+          background: url(../img/logo-partner_aktsent.png?f66d783e5c72812c0c3ef41231df7bb7) no-repeat center 7px white; }
 .content-partners ul li a.nashe-radio {
-        background: url(../img/logo-nashe-radio.png) no-repeat center #C63032; }
+          background: url(../img/logo-partner_nashe-radio.png?df3707fd33694c3a64f165c57b1c175f) no-repeat center #C63032; }
 .content-partners ul li a.dauria {
-        background: url(../img/logo-dauria.png) no-repeat center #363487; }
+          background: url(../img/logo-partner_dauria.png?02c57294586b00c3ab14759bd1694ccf) no-repeat center #363487; }
 .content-partners ul li a.yaidu {
-        background: url(../img/logo-yaidu.png) no-repeat center white; }
+          background: url(../img/logo-partner_ya-idu.png?808cdf50aa7273ace6eb15da355137cc) no-repeat center white; }
 .content-partners ul li a.angara {
-        background: url(../img/logo-angara.jpg) no-repeat center white; }
+          background: url(../img/logo-partner_angara.jpg?6f4123f0828e8a2c729e19e14ac15fdc) no-repeat center white; }
 .content-partners ul li a.baikal-eco {
-        background: url(../img/logo-baikal-eco.png) no-repeat center white; }
+          background: url(../img/logo-partner_baikal-eco.png?5998a2af8df3a3a63dc2720f8c07b749) no-repeat center white; }
 .content-partners ul li a.ALS-Studio {
-        background: url(../img/logo-als.png) no-repeat center white; }
+          background: url(../img/logo-partner_als.png?f7252e7568040e245d6c4edc88ae2c1f) no-repeat center white; }
 .content-partners ul li a.busy-bee {
-        background: url(../img/logo-busybee.png) no-repeat center white; }
+          background: url(../img/logo-partner_busybee.png?6de92357570fa01f11182312a5ff9ac9) no-repeat center white; }
 .content-partners ul li a.administration {
-        text-indent: 0px;
-        text-decoration: none;
-        font-weight: bold; }
+          text-indent: 0px;
+          text-decoration: none;
+          font-weight: bold; }
 .seal {
-  background: url(../img/fish_seal-1.png) no-repeat center;
+  background: url(../img/seal.png?55ca0df86ced560b64cfe60afca1c12c) no-repeat center;
   z-index: 1;
   width: 100%;
   height: 479px;
@@ -7474,7 +7509,7 @@ body {
   height: 190px;
   margin-top: -100px;
   clear: both;
-  background: url(../img/background_footer1.png) repeat-x center bottom;
+  background: url(../img/background_footer.png?786d6f716e9ce97c82870cf59097c95c) repeat-x center bottom;
   z-index: 2111;
   position: relative; }
 #footer .footer {
@@ -7531,8 +7566,8 @@ body {
               color: #006699;
               font-size: 40px;
               text-decoration: none;
-              -webkit-transition: color 0.3s ease-out;
-              transition: color 0.3s ease-out; }
+              -webkit-transition: color 0.4s ease-out;
+              transition: color 0.4s ease-out; }
 #footer .footer .footer-box .footer-center ul li a#mail::before {
               content: "\F003"; }
 #footer .footer .footer-box .footer-center ul li a#vk-link::before {
@@ -7546,8 +7581,16 @@ body {
 #footer .footer .footer-box .footer-center ul li a#inst-link::before {
               content: "\F16D"; }
 #footer .footer .footer-box .footer-center ul li a:hover::before {
-              color: #F9A01A;
-              -webkit-transition: color 0.3s ease-out;
-              transition: color 0.3s ease-out; }
+              color: #c82d1f;
+              -webkit-transition: color 0.4s ease-out;
+              transition: color 0.4s ease-out; }
+.red {
+  height: 20px; }
+@media (max-width: 767.99px) {
+    .red {
+      background: greenyellow; } }
+@media (min-width: 576px) {
+    .red {
+      background: red; } }
 
 /*# sourceMappingURL=home.css.map*/

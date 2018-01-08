@@ -1,3 +1,9 @@
+//== Media queries breakpoints
+$screen-xs:                  480px !default;
+$screen-sm:                  768px !default;
+$screen-md:                  992px !default;
+$screen-lg:                  1200px !default;
+
 //Font-Awesome
 @mixin fa-icon() {
     display: inline-block;
@@ -24,30 +30,35 @@
 }
 
 body {
-/*     &::after {
-        //0 - 480
-        @media screen and (max-width: $screen-xs) {
+     &::after {
+        //Width 0 - 575.99
+       /* @include media-breakpoint-only(xs) {
             @include adaptive_marker(red, "0");
-        } //todo
+        }*/
 
-        //480 - 768
-        @media screen and (min-width: $screen-xs) and (max-width: $screen-sm) {
+        //Width 0 - 767.99
+         @include media-breakpoint-between(xs, sm) {
             @include adaptive_marker(blue, "xs");
-        } //todo
+        }
 
-        //768 - 992
-        @media screen and (min-width: $screen-sm) and (max-width: $screen-md) {
+        //Width 768 - 991.99
+         @include media-breakpoint-between(sm, md) {
             @include adaptive_marker(yellow, "sm");
-        } //todo
+        }
 
-        //992 - 1200
-        @media screen and (min-width: $screen-md) and (max-width: $screen-lg) {
+        //Width 768 - 991.99
+         @include media-breakpoint-between(md, lg) {
             @include adaptive_marker(greenyellow, "md");
-        } //todo
+        }
 
-        //1200 - infinity
-        @media screen and (min-width: $screen-lg) {
+        //Width 992 - 1199.99
+         @include media-breakpoint-between(lg, xl) {
             @include adaptive_marker(violet, "lg");
-        } //todo
-    } */
+        }
+
+        //Width 1200 - infinity
+         @include media-breakpoint-only(xl) {
+            @include adaptive_marker(silver, "xl");
+        }
+    }
 }

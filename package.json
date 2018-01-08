@@ -2,7 +2,7 @@
   "name": "baikallive-winter",
   "version": "1.0.0",
   "description": "Simple landing site for a winter music fest «Baikal live»",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
     "test": "test"
   },
@@ -31,7 +31,8 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.0"
   },
   "dependencies": {
     "css-loader": "^0.28.7",

@@ -21,7 +21,7 @@ body {
 .main-content-wrapper {
     height: 100%;
     width: 100%;
-    background: url('../img/background-content2.jpg') repeat-x center bottom;
+    background: url('../img/background-content.jpg') repeat-x center bottom;
     color: white;
 }
 .main-content {
@@ -29,7 +29,7 @@ body {
     //width: auto;
     margin: 0 auto;
     overflow: hidden;
-    width: 1160px;
+    //width: 1160px;
     margin-top: 10px;
     padding: 0 20px;
     position: relative;
@@ -37,7 +37,7 @@ body {
 
 //Header
 #head { /*Основной контейнер.*/
-    background: url(../img/background-header3.png) repeat-x center -10px;
+    background: url(../img/background-header.png) repeat-x center -10px;
     .head-box { /*Блок с контентом шапки.*/
         height: 250px;
         margin: 0 auto;
@@ -65,7 +65,7 @@ body {
             width: 576px;
             height: 180px;
             margin: 0 auto;
-            background: url(../img/logo2.png) no-repeat;
+            background: url(../img/logo_baikal-live.png) no-repeat;
         }
     }
 }
@@ -105,14 +105,15 @@ body {
             display: inline-block;
             margin-top: 20px;
             text-decoration: none;
-
             background: #c82d1f;
             padding: 14px 15px 15px;
             border-radius: 8px;
             margin-bottom: 5px;
+            transition: $transition;
 
             &:hover {
                 background: #ea3524;
+                transition: $transition;
             }
         }
     }
@@ -177,7 +178,7 @@ body {
                 //background: url(../img/yrievskiy1.jpg) no-repeat;
             }
             &.pic-3 {
-                background: url(../img/all1.jpg) no-repeat;
+                //background: url(../img/all1.jpg) no-repeat;
             }
         }
         .inf {
@@ -296,72 +297,72 @@ body {
                 text-indent: -40000px;
                 background: white;
                 transition: $transition;
-            }
-            a:hover {
-                opacity: 1;
-                border-color: #0086c9;
-                transition: $transition;
-            }
-            a.free {
-                padding-top: 60px;
-                text-indent: 0;
-                text-decoration: none;
-                span {
-                    display: block;
-                    text-decoration: underline;
-                    font-weight: bold;
-                }
                 &:hover {
+                    opacity: 1;
+                    border-color: #0086c9;
+                    transition: $transition;
+                }
+                &.free {
+                    padding-top: 60px;
+                    text-indent: 0;
+                    text-decoration: none;
                     span {
-                        text-decoration: none;
+                        display: block;
+                        text-decoration: underline;
+                        font-weight: bold;
+                    }
+                    &:hover {
+                        color: $c_reddark;
+                        span {
+                            text-decoration: none;
+                        }
                     }
                 }
-            }
-            a.aktsent {
-                background: url(../img/logo-aktsent.png) no-repeat center 7px white;
-            }
-            a.nashe-radio {
-                background: url(../img/logo-nashe-radio.png) no-repeat center #C63032;
-            }
-            a.dauria {
-                background: url(../img/logo-dauria.png) no-repeat center #363487;
-            }
-            a.irk {
-                //background: url(../img/logo-irk.png) no-repeat center white;
-            }
-            a.yaidu {
-                background: url(../img/logo-yaidu.png) no-repeat center white;
-            }
-            a.angara {
-                background: url(../img/logo-angara.jpg) no-repeat center white;
-            }
-            a.baikal-eco {
-                background: url(../img/logo-baikal-eco.png) no-repeat center white;
-            }
-            a.ALS-Studio {
-                background: url(../img/logo-als.png) no-repeat center white;
-            }
-            a.busy-bee {
-                background: url(../img/logo-busybee.png) no-repeat center white;
-            }
-            a.administration {
-                text-indent: 0px;
-                text-decoration: none;
-                font-weight: bold;
+                &.aktsent {
+                    background: url(../img/logo-partner_aktsent.png) no-repeat center 7px white;
+                }
+                &.nashe-radio {
+                    background: url(../img/logo-partner_nashe-radio.png) no-repeat center #C63032;
+                }
+                &.dauria {
+                    background: url(../img/logo-partner_dauria.png) no-repeat center #363487;
+                }
+                &.yaidu {
+                    background: url(../img/logo-partner_ya-idu.png) no-repeat center white;
+                }
+                &.irk {
+                    //background: url(../img/logo-partner_irk.png) no-repeat center white;
+                }
+                &.angara {
+                    background: url(../img/logo-partner_angara.jpg) no-repeat center white;
+                }
+                &.baikal-eco {
+                    background: url(../img/logo-partner_baikal-eco.png) no-repeat center white;
+                }
+                &.ALS-Studio {
+                    background: url(../img/logo-partner_als.png) no-repeat center white;
+                }
+                &.busy-bee {
+                    background: url(../img/logo-partner_busybee.png) no-repeat center white;
+                }
+                &.administration {
+                    text-indent: 0px;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
             }
         }
     }
 }
 .seal {
-background: url(../img/fish_seal-1.png) no-repeat center;
-z-index: 1;
-width: 100%;
-height: 479px;
-position: absolute;
-bottom: 0px;
-left: -50px;
+    background: url(../img/seal.png) no-repeat center;
+    z-index: 1;
+    width: 100%;
+    height: 479px;
+    position: absolute;
+    bottom: 0px;
+    left: -50px;
 } //Нерпа
-
 
 //Footer
 #footer {
@@ -370,7 +371,7 @@ left: -50px;
         height: 190px;
         margin-top: -100px;
         clear: both;
-        background: url(../img/background_footer1.png) repeat-x center bottom;
+        background: url(../img/background_footer.png) repeat-x center bottom;
         z-index: 2111;
         position: relative;
     }
@@ -421,7 +422,7 @@ left: -50px;
                                 color: $c_bluedark;
                                 font-size: 40px;
                                 text-decoration: none;
-                                transition: color 0.3s ease-out;
+                                transition: color 0.4s ease-out;
 
                             }
                             &#mail::before {
@@ -444,8 +445,9 @@ left: -50px;
                             }
                             &:hover {
                                 &::before {
-                                    color: $c_orange;
-                                    transition: color 0.3s ease-out;
+                                    //color: $c_orange;
+                                    color: $c_reddark;
+                                    transition: color 0.4s ease-out;
                                 }
                             }
                         }
@@ -453,5 +455,15 @@ left: -50px;
                 }
             }
         }
+    }
+}
+
+.red {
+    height: 20px;
+    @include media-breakpoint-between(xs, sm) {
+        background: greenyellow;
+    }
+    @include media-breakpoint-between(sm, xl) {
+        background: red;
     }
 }
