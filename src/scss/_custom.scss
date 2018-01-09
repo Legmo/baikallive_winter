@@ -14,67 +14,72 @@ body {
     min-height: 100%;
     width: 100%;
 }
-.content { /*Задаём размеры блока с контентом + выравниваем по центру.*/
-    margin: 0 auto; /*Выравниваем посередине.*/
+.content {
     height: 100%; /*Прижимаем подвал книзу.*/
+    background: url('../img/background-header.png') repeat-x center -10px;
 }
-.main-content-wrapper {
+.main-content {
     height: 100%;
     width: 100%;
     background: url('../img/background-content.jpg') repeat-x center bottom;
     color: white;
 }
-.main-content {
-    height: 100%;
-    //width: auto;
-    margin: 0 auto;
-    overflow: hidden;
-    max-width: 1160px;
-    margin-top: 10px;
-    padding: 0 20px;
-    position: relative;
-}
 
 //Header
-#head { /*Основной контейнер.*/
-    background: url(../img/background-header.png) repeat-x center -10px;
-    .head-box { /*Блок с контентом шапки.*/
-        height: 250px;
+#header { /*Основной контейнер.*/
+    .header-text {
+        color: white;
+        font-size: 26px;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 100%;
+        max-width: 576px;
         margin: 0 auto;
-        width: 1160px;
-        padding: 0 20px;
-        .header-text {
-            color: white;
-            font-size: 26px;
-            text-transform: uppercase;
-            font-weight: bold;
-            width: 576px;
-            margin: 0 auto;
-            padding-top: 20px;
-            font-family: $f_Rough;
-            .festival {
-                margin-left: 30px;
-            }
-            .year {
-                float: right;
-                margin-right: 25px;
-            }
-
+        padding-top: 20px;
+        font-family: $f_Rough;
+        .festival {
+            margin-left: 30px;
+            word-wrap: break-word;
         }
-        .logo { /*Блок с логотипом.*/
-            width: 576px;
-            height: 180px;
-            margin: 0 auto;
-            background: url(../img/logo_baikal-live.png) no-repeat;
+        .year {
+            //float: right;
+            margin-right: 25px;
+        }
+    }
+    .logo { /*Блок с логотипом.*/
+        width: 100%;
+        max-width: 576px;
+        height: 180px;
+        margin: 0 auto;
+        background: url(../img/logo_baikal-live.png) no-repeat;
+        background-size: contain;
+    }
+    @media screen and (max-width: 374.99px) {
+        .header-text {
+            .festival,
+            .year {
+                display: block;
+                margin: 0;
+                text-align: center;
+                font-size: 18px;
+            }
+        }
+    }
+    @media screen and (min-width: 375px) and (max-width: 575.99px) {
+        .header-text {
+            .festival,
+            .year {
+                display: block;
+                margin: 0;
+                text-align: center;
+                font-size: 22px;
+            }
         }
     }
 }
 
 //Main content
 .column-full {
-    width: 100%;
-    clear: both;
-    overflow: hidden;
     text-align: center;
     margin-bottom: 50px;
     .content-festival {
@@ -96,7 +101,7 @@ body {
     .content-festival-information p {
         font-size: 17px !important;
         line-height: 1.1;
-        width: 650px;
+        max-width: 650px;
         margin: 0 auto;
         padding-top: 10px;
         a.button {
@@ -118,11 +123,19 @@ body {
         }
     }
 
+    @media screen and (max-width: 575.99px) {
+        .content-festival {
+            .date {
+                font-size: 24px;
+            }
+            .place {
+                font-size: 18px;
+            }
+        }
+    }
+
 }
 .column-left {
-    width: 70%;
-    float: left;
-    //Концерты хедлайнеров
     .content-artists {
         margin: 20px 0;
         clear: both;
@@ -233,42 +246,69 @@ body {
             }
         }
 
+    }
+    @media screen and (max-width: 575.99px) {
 
-
+        .content-artists,
+        .content-artists.txt-only {
+            .inf {
+                padding: 0;
+                .what-where {
+                    .label {
+                        float: none;
+                        font-weight: bold;
+                        font-size: 16px;
+                        padding: 20px 0 5px;
+                        width: 100%;
+                        br {
+                            display: none;
+                        }
+                    }
+                    .item {
+                        margin-left: 0;
+                        a {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 .column-right {
-    width: 30%;
-    float: right;
     padding-top: 21px;
     ul {
         margin-top: 10px;
         padding-left: 15px;
-    }
-    ul li {
-        //list-style: none;
-        margin: 0 0 5px;
-        clear: both;
-    }
-    ul li .label {
-        width: 58px;
-        float: left;
-    }
-    ul li .item {
-        display: block;
-        margin-left: 58px;
+        li {
+            //list-style: none;
+            margin: 0 0 5px;
+            clear: both;
+            .label {
+                width: 58px;
+                float: left;
+            }
+            .item {
+                display: block;
+                margin-left: 58px;
+            }
+        }
     }
     .list {
         margin-bottom: 30px;
     }
-    .content-program h2 span {
-        font-size: 17px;
-    }
-    .content-program ul li:first-child {
-        //margin-bottom: 10px;
-    }
-    .content-program ul li:last-child {
-        //margin-top: 10px;
+    .content-program {
+        h2 span {
+            font-size: 17px;
+        }
+        ul li {
+            &:first-child {
+                //margin-bottom: 10px;
+            }
+            &:last-child {
+                //margin-top: 10px;
+            }
+        }
     }
 }
 .content-partners {
@@ -280,8 +320,9 @@ body {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        width: 900px;
+        max-width: 900px;
         margin: 0 auto;
+        padding: 0;
         li {
             padding: 30px 0 0;
             margin: 0 15px;
@@ -353,15 +394,27 @@ body {
             }
         }
     }
+
+    @media screen and (max-width: 575.99px) {
+        padding-bottom: 150px;
+    }
 }
 .seal {
-    background: url(../img/seal.png) no-repeat center;
+    background: url('../img/seal.png') no-repeat center;
+    background-size: contain;
     z-index: 1;
-    width: 100%;
+    width: 90%;
     height: 479px;
     position: absolute;
-    bottom: 0px;
-    left: -50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    @media screen and (max-width: 575.99px) {
+        display: none;
+        bottom: -30px;
+    }
 } //Нерпа
 
 //Footer
@@ -378,7 +431,7 @@ body {
     .footer {
         height: 200px; /*Прижимаем footer вниз.*/
         width: 100%;
-        min-width: 1000px;
+        //min-width: 1000px;
         position: absolute; /*Прижимаем footer вниз.*/
         top: 100%; /*Прижимаем footer вниз.*/
         margin-top: -200px; /*Прижимаем footer вниз.*/
@@ -387,21 +440,25 @@ body {
             height: 200px;
             overflow: hidden;
             margin: 0 auto;
-            width: 1160px;
+            max-width: 1160px;
             padding: 0 20px;
             .footer-center {
                 margin: 0 auto;
                 text-align: center;
-                width: 1000px;
+                max-width: 1000px;
                 ul {
-                    //margin-top: 20px;
-                    width: 640px;
+                    max-width: 640px;
                     margin: 100px auto 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-content: center;
                     li {
                         list-style: none;
                         color: white;
-                        float: left;
-                        margin: 0 15px;
+                        //float: left;
+                        display: block;
+                        margin: 0 15px 15px;
                         a {
                             display: block;
                             width: 70px;
@@ -452,6 +509,24 @@ body {
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 575.99px) {
+        .wrapper-footer_empty {
+            background: none;
+        }
+        .footer {
+            height: auto;
+            background-color: #0177C1;
+            padding-bottom: 30px;
+            .footer-box {
+                height: auto;
+                .footer-center ul {
+                    padding: 0;
+                    margin-top: 30px;
                 }
             }
         }
