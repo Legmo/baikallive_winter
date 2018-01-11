@@ -7448,6 +7448,20 @@ body {
           border-color: #0086c9;
           -webkit-transition: all 0.4s ease-out;
           transition: all 0.4s ease-out; }
+.content-partners ul li a.aktsent {
+          background: url(../img/logo-partner_aktsent.png?f66d783e5c72812c0c3ef41231df7bb7) no-repeat center 7px white; }
+.content-partners ul li a.nashe-radio {
+          background: url(../img/logo-partner_nashe-radio.png?df3707fd33694c3a64f165c57b1c175f) no-repeat center #C63032; }
+.content-partners ul li a.dauria {
+          background: url(../img/logo-partner_dauria.png?02c57294586b00c3ab14759bd1694ccf) no-repeat center #363487; }
+.content-partners ul li a.yaidu {
+          background: url(../img/logo-partner_ya-idu.png?808cdf50aa7273ace6eb15da355137cc) no-repeat center white; }
+.content-partners ul li a.baikal-eco {
+          background: url(../img/logo-partner_baikal-eco.png?5998a2af8df3a3a63dc2720f8c07b749) no-repeat center white; }
+.content-partners ul li a.busy-bee {
+          background: url(../img/logo-partner_busybee.png?6de92357570fa01f11182312a5ff9ac9) no-repeat center white; }
+.content-partners ul li a.revizor {
+          background: url(../img/logo-partner_revizor.png?acd47659a37482ec4778411967402e03) no-repeat center white; }
 .content-partners ul li a.free {
           padding-top: 60px;
           text-indent: 0;
@@ -7460,22 +7474,10 @@ body {
             color: #c82d1f; }
 .content-partners ul li a.free:hover span {
               text-decoration: none; }
-.content-partners ul li a.aktsent {
-          background: url(../img/logo-partner_aktsent.png?f66d783e5c72812c0c3ef41231df7bb7) no-repeat center 7px white; }
-.content-partners ul li a.nashe-radio {
-          background: url(../img/logo-partner_nashe-radio.png?df3707fd33694c3a64f165c57b1c175f) no-repeat center #C63032; }
-.content-partners ul li a.dauria {
-          background: url(../img/logo-partner_dauria.png?02c57294586b00c3ab14759bd1694ccf) no-repeat center #363487; }
-.content-partners ul li a.yaidu {
-          background: url(../img/logo-partner_ya-idu.png?808cdf50aa7273ace6eb15da355137cc) no-repeat center white; }
 .content-partners ul li a.angara {
           background: url(../img/logo-partner_angara.jpg?6f4123f0828e8a2c729e19e14ac15fdc) no-repeat center white; }
-.content-partners ul li a.baikal-eco {
-          background: url(../img/logo-partner_baikal-eco.png?5998a2af8df3a3a63dc2720f8c07b749) no-repeat center white; }
 .content-partners ul li a.ALS-Studio {
           background: url(../img/logo-partner_als.png?f7252e7568040e245d6c4edc88ae2c1f) no-repeat center white; }
-.content-partners ul li a.busy-bee {
-          background: url(../img/logo-partner_busybee.png?6de92357570fa01f11182312a5ff9ac9) no-repeat center white; }
 .content-partners ul li a.administration {
           text-indent: 0px;
           text-decoration: none;
