@@ -7365,9 +7365,13 @@ body {
       background: #c82d1f;
       padding: 5px 10px 4px;
       border-radius: 8px;
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      -webkit-transition: all 0.4s ease-out;
+      transition: all 0.4s ease-out; }
 .column-left .content-artists .inf a.button:hover {
-        background: #ea3524; }
+        background: #ea3524;
+        -webkit-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out; }
 .column-left .content-artists .inf .price {
       font-size: 11px; }
 .column-left .content-artists .inf .more-info {

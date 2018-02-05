@@ -171,9 +171,11 @@ body {
                 padding: 5px 10px 4px;
                 border-radius: 8px;
                 margin-bottom: 5px;
+                transition: $transition;
 
                 &:hover {
                     background: #ea3524;
+                    transition: $transition;
                 }
             }
             .price {
