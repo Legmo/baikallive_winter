@@ -137,10 +137,72 @@ body {
 }
 .column-left {
     .content-artists {
-        margin: 20px 0;
         clear: both;
-        padding-bottom: 30px;
         overflow: hidden;
+        max-width: calc(350px + 50px + 500px);
+        margin: 20px auto;
+        padding-bottom: 50px;
+        img {
+            width: 100%;
+            height: auto;
+            margin: 0 0 20px;
+            border-radius: 8px;
+            background-size: cover;
+        }
+        .inf {
+            padding-bottom: 20px;
+            .concert-date {
+                margin-bottom: 15px;
+                font-size: 24px;
+                line-height: 0.9;
+                span {
+                    font-size: 17px;
+                }
+            }
+            a.button {
+                color: white;
+                font-size: 14px;
+                display: inline-block;
+                margin-top: 12px;
+                margin-bottom: 10px;
+                text-decoration: none;
+
+                background: #c82d1f;
+                padding: 5px 10px 4px;
+                border-radius: 8px;
+                margin-bottom: 5px;
+
+                &:hover {
+                    background: #ea3524;
+                }
+            }
+            .price {
+                font-size: 11px;
+            }
+            .more-info {
+                margin-top: 20px;
+                font-size: 11px;
+            }
+            p {
+                margin-bottom: 10px;
+                &.what-where {
+                    clear: both;
+                    .label {
+                        width: 55px;
+                        display: block;
+                        float: left;
+                    }
+                    .item {
+                        display: block;
+                        margin-left: 55px;
+                    }
+                    .item .who {
+                        color: $c_orange;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
         &.txt-only .inf {
             height: auto;
             width: 100%;
@@ -172,88 +234,34 @@ body {
                 }
             }
         }
-        &:nth-child(2) .inf {
-            text-align: right;
-        }
-        &:nth-child(3) {
-            //min-height: 280px;
-        }
-        .img {
-            float: left;
-            width: 350px;
-            height: 233px;
-            margin: 6px 20px 0 0;
-            border-radius: 8px;
-            &.pic-1 {
-                //background: url(../img/shyryaeva1.jpg) no-repeat;
-            }
-            &.pic-2 {
-                //background: url(../img/yrievskiy1.jpg) no-repeat;
-            }
-            &.pic-3 {
-                //background: url(../img/all1.jpg) no-repeat;
-            }
-        }
-        .inf {
-            float: left;
-            width: 350px;
-            height: 233px;
-            margin-right: 20px;
-            .concert-date {
-                margin-bottom: 15px;
-                span {
-                    float: left;
-                    width: 350px;
-                    height: 233px;
-                    margin: 6px 20px 0 0;
-                    border-radius: 8px;
-                }
-            }
-            a {
-                color: white;
-                font-size: 14px;
-                display: inline-block;
-                margin-top: 20px;
-                text-decoration: none;
-
-                background: #c82d1f;
-                padding: 5px 10px 4px;
-                border-radius: 8px;
-                margin-bottom: 5px;
-
-                &:hover {
-                    background: #ea3524;
-                }
-            }
-            .price {
-                font-size: 11px;
-            }
-            .more-info {
-                margin-top: 20px;
-                font-size: 11px;
-            }
-            .what-where {
-                clear: both;
-            }
-            .what-where .label {
-                width: 55px;
-                display: block;
-                float: left;
-            }
-            .what-where .item {
-                display: block;
-                margin-left: 55px;
-            }
-        }
-
     }
-    @media screen and (max-width: 575.99px) {
 
-        .content-artists,
-        .content-artists.txt-only {
+    @media screen and (max-width: 575.99px) {
+        .content-artists {
             .inf {
+               p.what-where {
+                   margin-bottom: 5px;
+                    .label {
+                        float: none;
+                        font-weight: bold;
+                        font-size: 16px;
+                        padding: 10px 0 5px;
+                        width: 100%;
+                        br {
+                            display: none;
+                        }
+                    }
+                    .item {
+                        margin-left: 0;
+                        a {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+            &.txt-only .inf {
                 padding: 0;
-                .what-where {
+                p.what-where {
                     .label {
                         float: none;
                         font-weight: bold;
@@ -273,10 +281,51 @@ body {
                 }
             }
         }
+
+    }
+    @media screen and (min-width: 576px) and (max-width: 767.98px) {}
+    @include media-breakpoint-only(md) {}
+    @include media-breakpoint-only(lg) {
+        .content-artists {
+            //display: flex;
+            padding-bottom: 80px;
+            .inf {
+                min-height: 233px;
+                padding-bottom: 0;
+                a {
+                    margin-top: 20px;
+                }
+            }
+            &:nth-child(odd) {
+                .inf {
+                    padding-left: 40px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-only(xl) {
+        .content-artists {
+            //display: flex;
+            padding-bottom: 80px;
+            .inf {
+                max-width: 500px;
+                min-height: 233px;
+                padding-bottom: 0;
+                a {
+                    margin-top: 20px;
+                }
+            }
+            &:nth-child(odd) {
+                .inf {
+                    padding-left: 40px;
+                }
+            }
+        }
     }
 }
 .column-right {
-    padding-top: 21px;
+    margin-top: -50px;
+    padding: 21px 0 0 30px;
     ul {
         margin-top: 10px;
         padding-left: 15px;
@@ -298,8 +347,12 @@ body {
         margin-bottom: 30px;
     }
     .content-program {
-        h2 span {
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            span {
             font-size: 17px;
+        }
         }
         ul li {
             &:first-child {
@@ -308,6 +361,20 @@ body {
             &:last-child {
                 //margin-top: 10px;
             }
+        }
+    }
+
+
+    @include media-breakpoint-only(lg) {
+        margin-top: 0;
+        .content-program h2 {
+            text-align: left;
+        }
+    }
+    @include media-breakpoint-only(xl) {
+        margin-top: 0;
+        .content-program h2 {
+            text-align: left;
         }
     }
 }
@@ -343,8 +410,8 @@ body {
                     border-color: #0086c9;
                     transition: $transition;
                 }
-                &.aktsent {
-                    background: url(../img/logo-partner_aktsent.png) no-repeat center 7px white;
+                &.irk_ru {
+                    background: url(../img/logo-partner_irk-ru.png) no-repeat center white;
                 }
                 &.nashe-radio {
                     background: url(../img/logo-partner_nashe-radio.png) no-repeat center #C63032;
@@ -381,8 +448,9 @@ body {
                     }
                 }
 
-                &.irk {
-                    //background: url(../img/logo-partner_irk.png) no-repeat center white;
+
+                &.aktsent {
+                    background: url(../img/logo-partner_aktsent.png) no-repeat center 7px white;
                 }
                 &.angara {
                     background: url(../img/logo-partner_angara.jpg) no-repeat center white;
@@ -450,9 +518,12 @@ body {
                 margin: 0 auto;
                 text-align: center;
                 max-width: 1000px;
+                h2 {
+                    display: none;
+                }
                 ul {
                     max-width: 640px;
-                    margin: 100px auto 0;
+                    margin: 110px auto 0;
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
@@ -528,9 +599,14 @@ body {
             padding-bottom: 30px;
             .footer-box {
                 height: auto;
-                .footer-center ul {
+                .footer-center {
+                    h2 {
+                        display: block;
+                    }
+                    ul {
                     padding: 0;
                     margin-top: 30px;
+                }
                 }
             }
         }
