@@ -7094,72 +7094,38 @@ a.text-dark:focus, a.text-dark:hover {
       background-color: #fff !important; }
   .table-bordered th, .table-bordered td {
     border: 1px solid #ddd !important; } }
-@media screen and (max-width: 374.99px) {
-  body::after {
-    content: "xss";
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 30px;
-    height: 30px;
-    background: red;
-    z-index: 999999999;
-    text-align: center; } }
-@media screen and (min-width: 375px) and (max-width: 575.99px) {
-  body::after {
-    content: "xs";
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 30px;
-    height: 30px;
-    background: blue;
-    z-index: 999999999;
-    text-align: center; } }
-@media (min-width: 576px) and (max-width: 991.99px) {
-  body::after {
-    content: "sm";
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 30px;
-    height: 30px;
-    background: yellow;
-    z-index: 999999999;
-    text-align: center; } }
-@media (min-width: 768px) and (max-width: 1199.99px) {
-  body::after {
-    content: "md";
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 30px;
-    height: 30px;
-    background: greenyellow;
-    z-index: 999999999;
-    text-align: center; } }
-@media (min-width: 992px) {
-  body::after {
-    content: "lg";
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 30px;
-    height: 30px;
-    background: violet;
-    z-index: 999999999;
-    text-align: center; } }
-@media (min-width: 1200px) {
-  body::after {
-    content: "xl";
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 30px;
-    height: 30px;
-    background: silver;
-    z-index: 999999999;
-    text-align: center; } }
+body {
+  /* &::after {
+         //Width 0 - 374.99
+         @media screen and (max-width: 374.99px) {
+             @include adaptive_marker(red, "xss");
+         }
+
+         //Width 375 - 575.99
+         @media screen and (min-width: 375px) and (max-width: 575.99px) {
+             @include adaptive_marker(blue, "xs");
+         }
+
+        //Width 576 - 767.99
+         @include media-breakpoint-between(sm, md) {
+            @include adaptive_marker(yellow, "sm");
+        }
+
+        //Width 768 - 991.99
+         @include media-breakpoint-between(md, lg) {
+            @include adaptive_marker(greenyellow, "md");
+        }
+
+        //Width 992 - 1199.99
+         @include media-breakpoint-between(lg, xl) {
+            @include adaptive_marker(violet, "lg");
+        }
+
+        //Width 1200 - infinity
+         @include media-breakpoint-only(xl) {
+            @include adaptive_marker(silver, "xl");
+        }
+    }*/ }
 @font-face {
   font-family: 'Posterizer_KG';
   src: url(../fonts/Posterizer_KG.otf?135f30512ec927134236c4693fb1a7c4); }
